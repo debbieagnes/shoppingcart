@@ -1,0 +1,36 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+	-webkit-box-sizing:border-box; 
+	-moz-box-sizing:border-box; 
+	box-sizing:border-box;
+}
+body {
+    font-size: 62.5%;
+    font-family: 'Open Sans';
+    color: #222;
+    background-color: #F1F1F1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.main-container {
+    position: absolute;
+    width: 100%;
+}
+.product-wrapper {
+    width: 50%;
+    margin: 20px auto;
+}
+section {
+    background: #FFF;
+    padding: 20px; 
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+section figure, 
+section div {
+    display: inline-block;
+}
