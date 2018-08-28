@@ -17,12 +17,17 @@ body {
 }
 
 .main-container {
-    position: absolute;
-    width: 100%;
+    position: relative;
+    width: 1080px;
+    margin: 0 auto;
+}
+.product-header {
+    position: relative;
 }
 .product-wrapper {
-    width: 50%;
+    width: 75%;
     margin: 20px auto;
+    position: absolute;
 }
 section {
     background: #FFF;
@@ -63,8 +68,19 @@ button.add-to-cart {
     outline: none;
     cursor: pointer;
 }
-.product-header p {
+.product-header,
+.cart-header,
+.cart-body, 
+.cart-footer {
+    padding: 10px 20px;
+}
+.product-header span,
+.cart-header span {
     text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1em;
+    color: #666;
 }
 .product-header div.product {
     position: relative;
@@ -72,7 +88,7 @@ button.add-to-cart {
 }
 div.product {
     display: inline-block;
-    width: 40%;
+    width: 49%;
 }
 div.price {
     width: 100px;
@@ -93,11 +109,67 @@ div.add {
     width: 120px;
     text-align: center;
 }
-
+.product-header div.bag {
+    width: 15%;
+    text-align: right;
+}
 
 .cart-items {
     background: #F8E7E4;
     height: 20px;
     width: 20px;
     border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 2px;
+    margin-left: 5px;
+}
+
+
+.cart-container {
+    position: absolute;
+    top: 0;
+    left: 75%;
+    width: 25%;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 0;
+    overflow: hidden;
+    /* -webkit-transition: all 1s; 
+    transition: all 1s; */
+}
+.cart-header, 
+.cart-body, 
+.cart-footer {
+    background: #FFF;
+}
+.cart-container.open {
+    -webkit-transition: all 0.5s; 
+    transition: all 0.5s;
+    width: 25%;
+}
+.cart-header {
+    margin-bottom: 10px;
+    height: 40px;
+}
+.cart-header span {
+    display: inline-block;
+    position: absolute;
+}
+div.cart-container .cart-header span,
+div.cart-container .cart-body span,
+div.cart-container .cart-footer span  {
+    opacity: 0;
+    /* -webkit-transition: all 0.3s; 
+    transition: all 0.3s;
+    transition-delay: 0.4s; */
+}
+div.open .cart-header span,
+div.open .cart-body span,
+div.open .cart-footer span   {
+    opacity: 1;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    transition-delay: 0.1s;
 }

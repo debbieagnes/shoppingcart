@@ -13,20 +13,13 @@
     <div class="main-container">
         <div class="product-wrapper">
             <section class="product-header">
-                <div class="product"><p>Product</p></div>
-                <div class="price"><p>Price</p></div>
+                <div class="product"><span>Product</span></div>
+                <div class="price"><span>Price</span></div>
                 <!-- <div class="quantity"><p>Quantity</p></div> -->
-                <div class="add"><p>Add</p></div>
-                <div class="bag"><p>My Bag</p>
-                <!-- <div class="card text-white bg-info mb-3" style="width: 18rem;">
-                    <div class="card-header">Cart Info</div>
-                    <div class="card-body" data-kart="display">
-                        <div>Total item: <span data-kart-total-item="0">0</span></div>
-                        <div>Total Price: $<span data-kart-total-price="0">0.00</span></div>
-                    </div>
-                </div> -->
-                <!-- <span id="count">0</span> -->
-                    <div class="cart-items">0</div>
+                <!-- <div class="add"></div> -->
+                <div class="bag">
+                    <span class="my-bag">My Bag</span>
+                    <span class="cart-items">0</span>
                 </div>
             </section>
 
@@ -50,9 +43,12 @@
                     <!-- <button class="add-to-cart" data-price="25.99">Add to cart</button> -->
                     <!-- <a href="#0" class="cd-add-to-cart" data-price="24.99">Add To Cart</a> -->
                     <button class="add-to-cart"
-                        data-kart="item-button"
+                        data-kart="item-1"
                         data-kart-item-status="add-item"
-                        data-kart-item='{"id": 1, "price": 9.99}'>
+                        data-kart-item='{"id": 1, "price": 9.99}'
+                        data-basket-product-price="100"
+                        data-basket-product-id="prod1"
+                        data-basket-product-name="Apples">
                         Add to Cart
                     </button>
                 </div>
@@ -145,12 +141,27 @@
         </div>
 
 
+        <div class="cart-container">
+            <div class="cart-header">
+                <span>Cart Info</span>
+                <!-- <span>Product</span>
+                <span>Price</span>
+                <span>Quantity</span>
+                <span>Total</span> -->
+            </div>
+            <div class="cart-body">
+                
+            </div>
+            <div class="cart-footer">
+                <span>Total:</span>
 
+            </div>
+        </div>
 
 
     </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="./js/script.js"></script>
-<script src="./js/shopkart.js"></script>
+<!-- <script src="./js/shopkart.js"></script> -->
 </html>
