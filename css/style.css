@@ -9,7 +9,7 @@
 }
 body {
     font-size: 62.5%;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
     color: #222;
     background-color: #F1F1F1;
     -webkit-font-smoothing: antialiased;
@@ -33,4 +33,71 @@ section {
 section figure, 
 section div {
     display: inline-block;
+    vertical-align: middle;
+}
+h2 {
+    font-size: 2.5em;
+    padding-bottom: 5px;
+}
+p {
+    font-size: 1.2em;
+}
+p.price {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+section div {
+    margin-left: 20px;
+}
+input {
+    width: 20px;
+    text-align: center;
+}
+button.add-to-cart {
+    text-transform: uppercase;
+    background: #F8E7E4;
+    border-radius: 16px;
+    height: 32px;
+    padding: 0 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+}
+.product-header p {
+    text-transform: uppercase;
+}
+.product-header div.product {
+    position: relative;
+    margin-left: 120px;
+}
+div.product {
+    display: inline-block;
+    width: 40%;
+}
+div.price {
+    width: 100px;
+    text-align: center;
+}
+.product-container div.price {
+    font-size: 1.2em;
+    font-weight: bold;
+} 
+.product-container div.quantity button {
+    font-size: 2em;
+}
+.product-container div.quantity input {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+div.add {
+    width: 120px;
+    text-align: center;
+}
+
+
+.cart-items {
+    background: #F8E7E4;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
 }

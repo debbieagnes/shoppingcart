@@ -5,42 +5,152 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <title>Shopping Basket</title>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<!-- <link rel="stylesheet" href="css/style2.css"> -->
 </head>
 <body>
     <div class="main-container">
         <div class="product-wrapper">
-            <section class="product-container">
-                <figure>
-                    <img src="https://via.placeholder.com/50x50">
-                </figure>
-                <div>
-                    <h2>Apples</h2>
-                    <p>Nom ! green apples</p>
-                    <button>Add to cart</button>
+            <section class="product-header">
+                <div class="product"><p>Product</p></div>
+                <div class="price"><p>Price</p></div>
+                <!-- <div class="quantity"><p>Quantity</p></div> -->
+                <div class="add"><p>Add</p></div>
+                <div class="bag"><p>My Bag</p>
+                <!-- <div class="card text-white bg-info mb-3" style="width: 18rem;">
+                    <div class="card-header">Cart Info</div>
+                    <div class="card-body" data-kart="display">
+                        <div>Total item: <span data-kart-total-item="0">0</span></div>
+                        <div>Total Price: $<span data-kart-total-price="0">0.00</span></div>
+                    </div>
+                </div> -->
+                <!-- <span id="count">0</span> -->
+                    <div class="cart-items">0</div>
                 </div>
             </section>
+
             <section class="product-container">
                 <figure>
-                    <img src="https://via.placeholder.com/50x50">
+                    <img src="https://via.placeholder.com/100x100">
                 </figure>
-                <div>
-                    <h2>Apples</h2>
-                    <p>Nom ! green apples</p>
-                    <button>Add to cart</button>
+                <div class="product">
+                    <h2>Pen</h2>
+                    <p>A pen is a common writing instrument used to apply ink to a surface, usually paper, for writing or drawing. Historically, reed pens, quill pens, and dip pens were...</p>
+                </div>
+                <div class="price">
+                    <p>€ 9.99</p>
+                </div>
+                <!-- <div class="quantity">
+                    <button type="button" class="button"  data-type="minus" data-field="">-</button>
+                    <input type="text" id="quantity" name="quantity" value="1" min="1" max="100"> 
+                    <button type="button" class="button" data-type="plus" data-field="">+</button>
+                </div> -->
+                <div class="add"> 
+                    <!-- <button class="add-to-cart" data-price="25.99">Add to cart</button> -->
+                    <!-- <a href="#0" class="cd-add-to-cart" data-price="24.99">Add To Cart</a> -->
+                    <button class="add-to-cart"
+                        data-kart="item-button"
+                        data-kart-item-status="add-item"
+                        data-kart-item='{"id": 1, "price": 9.99}'>
+                        Add to Cart
+                    </button>
                 </div>
             </section>
+
             <section class="product-container">
                 <figure>
-                    <img src="https://via.placeholder.com/50x50">
+                    <img src="https://via.placeholder.com/100x100">
                 </figure>
-                <div>
-                    <h2>Apples</h2>
-                    <p>Nom ! green apples</p>
-                    <button>Add to cart</button>
+                <div class="product">
+                    <h2>Pineapple</h2>
+                    <p>The pineapple (Ananas comosus) is a tropical plant with an edible multiple fruit consisting of coalesced berries, also called pineapples, and the most ...</p>
+                </div>
+                <div class="price">
+                    <p>€ 19.99</p>
+                </div>
+                <!-- <div class="quantity">
+                    <button type="button" class="button"  data-type="minus" data-field="">-</button>
+                    <input type="text" id="quantity" name="quantity" value="1" min="1" max="100"> 
+                    <button type="button" class="button" data-type="plus" data-field="">+</button>
+                </div> -->
+                <div class="add"> 
+                    <!-- <button class="add-to-cart" data-price="25.99">Add to cart</button> -->
+                    <!-- <a href="#0" class="cd-add-to-cart" data-price="24.99">Add To Cart</a> -->
+                    <button class="add-to-cart"
+                        data-kart="item-button"
+                        data-kart-item-status="add-item"
+                        data-kart-item='{"id": 2, "price": 19.99}'>
+                        Add to Cart
+                    </button>
                 </div>
             </section>
+
+            <section class="product-container">
+                <figure>
+                    <img src="https://via.placeholder.com/100x100">
+                </figure>
+                <div class="product">
+                    <h2>Apple</h2>
+                    <p>An apple is a sweet, edible fruit produced by an apple tree (Malus pumila). Apple trees are cultivated worldwide, and are the most widely grown species in the ...</p>
+                </div>
+                <div class="price">
+                    <p>€ 29.99</p>
+                </div>
+                <!-- <div class="quantity">
+                    <button type="button" class="button"  data-type="minus" data-field="">-</button>
+                    <input type="text" id="quantity" name="quantity" value="1" min="1" max="100"> 
+                    <button type="button" class="button" data-type="plus" data-field="">+</button>
+                </div> -->
+                <div class="add"> 
+                    <!-- <button class="add-to-cart" data-price="25.99">Add to cart</button> -->
+                    <!-- <a href="#0" class="cd-add-to-cart" data-price="24.99">Add To Cart</a> -->
+                    <button class="add-to-cart"
+                        data-kart="item-button"
+                        data-kart-item-status="add-item"
+                        data-kart-item='{"id": 3, "price": 29.99}'>
+                        Add to Cart
+                    </button>
+                </div>
+            </section>
+
+            <section class="product-container">
+                <figure>
+                    <img src="https://via.placeholder.com/100x100">
+                </figure>
+                <div class="product">
+                    <h2>Pear</h2>
+                    <p>The pear is any of several tree and shrub species of genus Pyrus /ˈpaɪrəs/, in the family Rosaceae. It is also the name of the pomaceous fruit of the various ...</p>
+                </div>
+                <div class="price">
+                    <p>€ 39.99</p>
+                </div>
+                <!-- <div class="quantity">
+                    <button type="button" class="button"  data-type="minus" data-field="">-</button>
+                    <input type="text" id="quantity" name="quantity" value="1" min="1" max="100"> 
+                    <button type="button" class="button" data-type="plus" data-field="">+</button>
+                </div> -->
+                <div class="add"> 
+                    <!-- <button class="add-to-cart" data-price="25.99">Add to cart</button> -->
+                    <!-- <a href="#0" class="cd-add-to-cart" data-price="24.99">Add To Cart</a> -->
+                    <button class="add-to-cart"
+                        data-kart="item-button"
+                        data-kart-item-status="add-item"
+                        data-kart-item='{"id": 4, "price": 39.99}'>
+                        Add to Cart
+                    </button>
+                </div>
+            </section>
+
         </div>
+
+
+
+
+
     </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="./js/script.js"></script>
+<script src="./js/shopkart.js"></script>
 </html>
