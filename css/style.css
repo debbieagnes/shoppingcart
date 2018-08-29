@@ -25,7 +25,7 @@ body {
     position: relative;
 }
 .product-wrapper {
-    width: 75%;
+    width: 70%;
     margin: 20px auto;
     position: absolute;
 }
@@ -33,7 +33,7 @@ section {
     background: #FFF;
     padding: 20px; 
     border-radius: 4px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 section figure, 
 section div {
@@ -75,12 +75,13 @@ button.add-to-cart {
     padding: 10px 20px;
 }
 .product-header span,
-.cart-header span {
+.cart-header span,
+.cart-footer span {
     text-transform: uppercase;
     display: inline-block;
     font-weight: bold;
-    font-size: 1em;
-    color: #666;
+    font-size: 1.2em;
+    color: #777;
 }
 .product-header div.product {
     position: relative;
@@ -88,7 +89,7 @@ button.add-to-cart {
 }
 div.product {
     display: inline-block;
-    width: 49%;
+    width: 45%;
 }
 div.price {
     width: 100px;
@@ -121,19 +122,24 @@ div.add {
     border-radius: 10px;
     display: inline-block;
     text-align: center;
-    font-weight: bold;
+    font-weight: bold !important;
     padding-top: 2px;
     margin-left: 5px;
+    font-size: 1em !important;
+}
+
+.product-header span.cart-items {
+    color: #222;
 }
 
 
 .cart-container {
     position: absolute;
     top: 0;
-    left: 75%;
+    left: 70%;
     width: 25%;
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 5px;
     width: 0;
     overflow: hidden;
     /* -webkit-transition: all 1s; 
@@ -147,10 +153,10 @@ div.add {
 .cart-container.open {
     -webkit-transition: all 0.5s; 
     transition: all 0.5s;
-    width: 25%;
+    width: 35%;
 }
 .cart-header {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     height: 40px;
 }
 .cart-header span {
@@ -172,4 +178,33 @@ div.open .cart-footer span   {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     transition-delay: 0.1s;
+}
+.cart-body ul {
+    list-style: none;
+}
+.cart-body li {
+    height: 40px;
+    border-bottom: 1px solid #EEE;
+    padding-top: 10px;
+}
+.cart-body span {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #777;
+}
+.cart-body span:first-child {
+    width: 45%;
+    font-size: 1.4em;
+    color: #222;
+}
+.cart-body span:nth-child(2) {
+    width: 50px;
+}
+.cart-body span:nth-child(4) {
+    float: right;
+}
+.cart-body span:last-child {
+    position: absolute;
+    right: 10px;
 }

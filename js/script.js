@@ -32,26 +32,10 @@ $(document).ready(function(){
 
   $(".my-bag").on("click", function() {
     $(".cart-container").toggleClass("open");
-
-    // if($(".cart-container").hasClass("open")){
-    //   console.log("yes!");
-    //   $(".cart-header").toggleClass("yes");
-    // }
-
   });
 
-
-  // $(".add-to-cart").click(function(){
-  //   sb_add_to_basket(
-  //    $(this).data("basket-product-id"),
-  //    $(this).data("basket-product-name"),
-  //    $(this).data("basket-product-price")
-  //   ); 
-  //  });
-
-  sb_set_basket_events();
-
-  
+  sb_set_basket_events();  
+  sb_sum_total();
 });
 
 
@@ -60,33 +44,29 @@ function sb_set_basket_events(){
 
  $(".add-to-cart").click(function(){
   sb_add_to_basket($(this));
-
-  
-  
  });
 
 }
 
-// function sb_add_to_basket(){
-//   console.log('sb_add_to_basket');
-// });
-
 
 function sb_add_to_basket(e){
 
-  // $(e).data("basket-product-id"),
-  // $(e).data("basket-product-name"),
-  // $(e).data("basket-product-price")
+  $(".cart-body ul").append(
+    "<li>" + "<span>" + $(e).data("product-name") + "</span>" +
+    "<span>" + "€ " + $(e).data("product-price") + "</span>" + 
+    '<input type="number" value="1">' +
+    '<span class="basket-total-amount">' + "€ " + "TOTAL" + "</span>" + 
+    "<span>" + "X" + "</span>" + "</li>"); 
 
-  console.log($(e).data("kart"));
-  console.log($(e).data("kart-item-status"));
-  console.log($(e).data("kart-item"));
-  console.log($(e).data("basket-product-price"));
-  console.log($(e).data("basket-product-id"));
-  console.log($(e).data("basket-product-name"));
+}
 
-  $(".cart-body").append($(e).data("kart"));
+function sb_sum_total(){
+  var total = 0;
+  $(".cart-body ul").find("li").each(function(){
+    var amount = Number($(this).find("input").val());
+    total = total + (amount * Number($(this).data("price")));
+  });
+  $(".basket-total-amount").text("\u20AC " + total);
 
-
-
+  console.log(sb_sum_total);
 }
